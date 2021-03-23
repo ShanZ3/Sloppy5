@@ -1,0 +1,127 @@
+<html dir="ltr" lang="en">
+<head nonce=""><title>Sign up - Spotify</title>
+
+
+  <title>Sign Up - Sloppy5</title>
+ 
+
+  <link rel="icon" href="sloppy5_icon.PNG">
+  <link href="stylesheet_login.css" media="screen" rel="stylesheet">
+</head>
+
+	
+<body ng-controller="LoginController" class="ng-scope">
+	
+<div ng-include="template" class="ng-scope">
+		<div sp-header="" class="ng-scope">
+			<div class="head ">
+</div>
+</div>
+
+<div class="container-fluid login ng-scope">
+  
+  <div class="content">
+ <div class="row ng-scope" ng-if="showContinueLabel">
+          <div class="col-xs-12 text-center">
+              <h1 id="login-to-continue" class="h3 ng-binding">Sign up with your email address</h1>
+          </div>
+    </div>
+	  
+  <form action="index.html">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <label for="login-username" class="control-label ng-binding">
+            What's your email?
+          </label>
+          <input ng-model="form.username" name="email" type="text" class="form-control input-with-feedback ng-pristine ng-valid-sp-disallow-chars ng-empty ng-invalid ng-invalid-required ng-touched" name="username" id="login-username" placeholder="Enter your email" required="" sp-disallow-chars=":%&amp;'`´&quot;" sp-disallow-chars-model="usernameDisallowedChars" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="autofocus" ng-trim="false" ng-change="onInputChange()">
+          <!-- ngIf: accounts.username.$dirty && accounts.username.$invalid -->
+        </div>
+      </div>
+	  
+	   <div class="row" ng-class="{'has-error': (accounts.username.$dirty &amp;&amp; accounts.username.$invalid) || invalidCredentials}">
+        <div class="col-xs-12">
+          <label for="login-username" class="control-label ng-binding">
+            Confirm Your Email
+          </label>
+          <input ng-model="form.username" name="email_confirm" type="text" class="form-control input-with-feedback ng-pristine ng-valid-sp-disallow-chars ng-empty ng-invalid ng-invalid-required ng-touched" name="username" id="login-username" placeholder="Enter your email again" required="" sp-disallow-chars=":%&amp;'`´&quot;" sp-disallow-chars-model="usernameDisallowedChars" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="autofocus" ng-trim="false" ng-change="onInputChange()">
+          <!-- ngIf: accounts.username.$dirty && accounts.username.$invalid -->
+        </div>
+      </div>
+
+      <div class="row" ng-class="{'has-error': (accounts.password.$dirty &amp;&amp; accounts.password.$invalid) || invalidCredentials}">
+        <div class="col-xs-12">
+          <label for="login-password" class="control-label ng-binding">
+            Create a password
+          </label>
+          <input ng-model="form.password" type="password" class="form-control input-with-feedback ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="password" id="login-password" placeholder="Create a password" required="" autocomplete="off" ng-trim="false" ng-change="onInputChange()">
+          <!-- ngIf: accounts.password.$dirty && accounts.password.$invalid -->
+        </div>
+      </div>
+	  
+	  <div class="row" ng-class="{'has-error': (accounts.password.$dirty &amp;&amp; accounts.password.$invalid) || invalidCredentials}">
+        <div class="col-xs-12">
+          <label for="login-password" class="control-label ng-binding">
+            What should we call you?
+          </label>
+          <input ng-model="form.username" type="text" class="form-control input-with-feedback ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="username" id="login-password" placeholder="Enter a profile name" required="" autocomplete="off" ng-trim="false" ng-change="onInputChange()">
+	      
+          <!-- ngIf: accounts.password.$dirty && accounts.password.$invalid -->
+        </div>
+      </div>
+
+      <!-- ngIf: showAutomationKey -->
+
+       <div class="row text-left mt-0">
+        
+		   <h5 class="h6 ng-binding">By clicking on Sign up, you agree to Sloppy5's Terms and Conditions of Use.</h5>
+		   <h5 class="h6 ng-binding">To learn more about how Sloppy5 collects, uses, shares and protects your personal data please read Sloppy5 's Privacy Policy.</h5>
+       </div>
+	  
+        <div>
+            <div class="row">
+                <div class="col-xs-12">
+                    
+		  <input class="btn btn-block btn-default ng-binding" type="submit"  value="Signup Sloppy5" > 
+                </div>
+            </div>
+        </div>
+
+    </form>
+	
+	 <div id="log-in-section">
+      <div class="row">
+        <div class="col-xs-12">
+          <signup class="ng-isolate-scope"><!-- ngIf: showSignup -->
+			  <div ng-if="showSignup" class="ng-scope">
+    <!-- ngIf: showButton --><div ng-if="showButton" class="ng-scope">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="divider">
+                    <!-- ngIf: showOrLabel -->
+                </div>
+            </div>
+        </div>
+        <div class="row text-center mt-0">
+            <h5 class="h4 ng-binding">Already have an account?</h5>
+        </div>
+        <div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <a id="log-in-link" ng-href="signup_sloppy5.html" class="btn btn-block btn-default ng-binding" role="button" href="login_sloppy5.html">Log in</a>
+                </div>
+            </div>
+        </div>
+    </div>
+				  
+</div><!-- end ngIf: showSignup -->
+</signup>
+        </div>
+      </div>
+    </div>
+	   </div><!-- .content -->
+</div><!-- .container -->
+</div>
+	
+
+</body></html>
